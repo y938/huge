@@ -1,0 +1,72 @@
+{% extends "Earth/base.html" %}
+
+{% block content %}
+{%load static %}
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+<h1 id="joj">Upload Page</h1>
+
+     {% if obj %}
+     <div class="gas"></div>
+        <h3>Succesfully uploaded : {{ obj.caption }} </h3>
+    </div>
+    <div class="jk">
+        <p>your image</p>
+        <img src="{{ obj.image.url }}" alt="image" class="jj">
+        <p>your profile pic</p>
+         <img src="{{ obj.profile_pic.url }}" alt="image" class="jj">
+    </div>
+        
+        {% endif %}
+ 
+<div>
+<form action="" enctype="multipart/form-data" method="post" class="hol">
+    {% csrf_token %}
+    <div id="hh">
+        
+        <div>
+            <label for="category" id="ss">Category</label><br>
+             <select name="relate" id="category" class="has">
+                <option value="3" selected>Natural Places</option>
+                 <option value="1">Animals</option>
+                 <option value="2">Foods</option>
+                 <option value="4">Plants</option>
+                 <option value="5">Drinks</option>
+                 <option value="6">Cities</option>
+             </select>
+        
+        </div><br>
+
+
+        <div>
+            <label for="caption" id="ss">Title</label> <br>
+            <input type="text" id="caption" name="caption" class="dod" placeholder="name of the image">
+        </div>
+        <br>
+        <div>
+            <label for="description" id="fd">Description</label> <br>
+            <textarea name="description" id="description" cols="40" rows="10" placeholder="say something about it"
+            class="juh"></textarea>
+        </div>
+        <br>
+        <div>
+            <label for="image" id="hd">Image:</label>
+            <input type="file" id="image" name="image" class="dd">
+        </div>
+        <br>
+        <div>
+            <label for= "file">Profile pic(optional):</label>
+            <input type="file" id="file" name="profile_pic"> <br>
+        </div>
+         <br>
+        <button type="submit" id="ff">upload</button>
+    </div>
+
+</div>
+
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends "Earth/base.html" %}
+
+{% block content %}
+{% load static %}
+{% load crispy_forms_tags %}
+<html>
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/desk.css' %}">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+          crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"></script>
+
+</head>
+<body style="background-color:black; color: white;"> 
+    <br><br>
+<h2 style="text-align: center; ">
+    <b>Registration Form</b></h2> <br> <br>
+<form style="width:65%; margin: auto;" method="POST"
+      action="">
+                {% csrf_token %}
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="first_name">First name</label>
+            <input type="text" class="form-control" id="first_name" name="first_name" required="True">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="last_name">Last name</label>
+            <input type="text" class="form-control" id="last_name" name="last_name" required="True">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="username">User name</label>
+            <input type="text" class="form-control" id="username" name="username">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="...@gmail or ... .com"
+               required="True">
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="password1">Password</label>
+            <input type="password" class="form-control" id="password1" name="password1">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="password2">Confirm password</label>
+            <input type="password" class="form-control" id="password2" name="password2">
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Sign up</button> <br>
+</form>
+<span style="text-align: center; color:red; position:absolute; top: 500;  left: 700;">
+    {{form.errors}}</span> 
+
+<div>
+    <p style="margin-left: 530px;" class="aa">
+        already have an account? <a href="{% url 'login' %}">login</a></p>
+</div>
+</body>
+</html>
+{% endblock %}

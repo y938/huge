@@ -1,0 +1,21 @@
+{% extends "Earth/base.html" %}
+
+{% block content %}
+{% load static %}
+
+        <link rel="stylesheet" type="text/css" href="{% static 'css/now.css' %}">    
+        <div class="row">
+            {% for x in ai %}
+  <div class="column">
+    <div class="content">
+      <div class="chip">
+        <img src=" {{ x.profile_pic.url }}" width="96" height="96" class="ss">
+      </div>
+      <h3>{{ x.caption }}</h3> <hr>
+      <img src="{{ x.image.url }}" style="width:100%; height: 300px;" > <hr>
+      <p>{{ x.description }}</p>
+    </div>
+  </div>
+        {% endfor %}
+    </div>
+{% endblock %}

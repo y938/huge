@@ -1,0 +1,88 @@
+.jj {
+    width:100px;
+    height:100px;
+    border:2px solid white;
+    border-radius:4px;
+    
+}
+.jk{
+        float: left;
+        margin-left: 70px;
+}
+
+#joj{
+        font-size:4vw;
+        text-align:center;
+}
+
+
+.hol {
+        width:45%;
+        margin-left:30%;
+        margin-top:30px;
+        border:2px solid white;
+        background-color:black;
+        border-radius:7px;
+        color:white;
+}
+
+#hh {
+        padding-left:30px;
+        padding-top:30px;
+        padding-bottom:20px;
+
+}
+
+body{
+        background-color:black;
+         color:white;
+}
+
+#ss {
+        font-size:20px;
+        font-family:sans-serf;
+}
+
+input[type="text"]{
+        width:360px;
+        height:30px;
+        border:2px solid grey;
+        border-radius:4px;
+}
+
+#fd {
+       font-size:20px;
+        font-family:sans-serf;
+}
+
+.juh {
+        border:2px solid grey;
+        border-radius:4px;
+}
+
+#hd {
+        font-size:20px;
+        font-family:sans-serf;
+}
+
+input[type="file"]{
+        width:200px;
+        border:2px solid grey;
+        border-radius:4px;
+        background-color:black;
+}
+
+.gas{
+        margin-left:100px;
+        float:left;
+        font-size: 15px;
+
+}
+
+.has {
+        width:300px;
+        height:30px;
+        border:2px solid grey;
+        border-radius:4px;
+}
+
